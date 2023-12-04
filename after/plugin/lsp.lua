@@ -4,7 +4,9 @@ lsp.preset('recomended')
 
 require('mason').setup()
 
-require('mason-lspconfig').setup {
+local lspconfig = require('mason-lspconfig')
+
+lspconfig.setup {
 	-- Replace the language servers listed here 
 	-- with the ones you want to install
 	ensure_installed = {
@@ -27,6 +29,7 @@ require('mason-lspconfig').setup {
 		'yamlls',
 		'taplo',
 		'zls',
+        'emmet_language_server',
 	},
 	handlers = {
 		lsp.default_setup,
