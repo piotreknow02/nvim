@@ -70,9 +70,7 @@ return require('packer').startup(function(use)
         end
     }
 
-    use 'ap/vim-css-color'
-
-    use 'tpope/vim-surround'
+    use 'norcalli/nvim-colorizer.lua'
 
 end)
 
