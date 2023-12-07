@@ -59,8 +59,8 @@ return require('packer').startup(function(use)
     use 'lewis6991/gitsigns.nvim'
 
     use {
-        'vim-airline/vim-airline',
-        requires = { {'vim-airline/vim-airline-themes'} }
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
     use {
