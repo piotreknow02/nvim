@@ -14,7 +14,6 @@ lspconfig.setup {
 		'eslint',
 		'lua_ls',
 		'rust_analyzer',
-		'omnisharp',
 		'dockerls',
 		'elixirls',
 		'eslint',
