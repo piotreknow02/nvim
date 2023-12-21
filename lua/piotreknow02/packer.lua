@@ -23,7 +23,26 @@ return require('packer').startup(function(use)
 
     use {
         'nvim-treesitter/nvim-treesitter',
-        { run = ':TSUpdate' }
+        { run = ':TSUpdate' },
+        requires = {
+            { "HiPhish/nvim-ts-rainbow2" },
+            { "windwp/nvim-ts-autotag" }
+        }
+    }
+
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
+
+    use {
+        'ThePrimeagen/refactoring.nvim',
+        requires = {
+            {'nvim-lua/plenary.nvim'},
+            {'nvim-treesitter/nvim-treesitter'}
+        }
     }
 
     use 'theprimeagen/harpoon'
@@ -31,10 +50,18 @@ return require('packer').startup(function(use)
     use 'mbbill/undotree'
 
     use {
-        "folke/trouble.nvim",
+        'folke/trouble.nvim',
         requires = {
-            { "nvim-tree/nvim-web-devicons" }
+            { 'nvim-tree/nvim-web-devicons' }
         }
+    }
+
+    use {
+        'lukas-reineke/indent-blankline.nvim',
+        scope = { enabled = false },
+        config = function()
+            require("ibl").setup { scope = { enabled = false } }
+        end
     }
 
     use {
@@ -67,8 +94,6 @@ return require('packer').startup(function(use)
     use 'eandrju/cellular-automaton.nvim'
 
     use 'windwp/nvim-autopairs'
-
-    use 'windwp/nvim-ts-autotag'
 
     use 'lewis6991/gitsigns.nvim'
 
