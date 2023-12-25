@@ -31,13 +31,6 @@ return require('packer').startup(function(use)
     }
 
     use {
-        'numToStr/Comment.nvim',
-        config = function()
-            require('Comment').setup()
-        end
-    }
-
-    use {
         'ThePrimeagen/refactoring.nvim',
         requires = {
             {'nvim-lua/plenary.nvim'},
