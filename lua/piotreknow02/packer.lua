@@ -38,9 +38,17 @@ return require('packer').startup(function(use)
         }
     }
 
-    use 'theprimeagen/harpoon'
+    use 'ThePrimeagen/Harpoon'
 
     use 'mbbill/undotree'
+
+    use {
+        "kylechui/nvim-surround",
+        tag = "*",
+        config = function()
+            require("nvim-surround").setup()
+        end
+    }
 
     use {
         'folke/trouble.nvim',
