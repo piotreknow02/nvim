@@ -21,6 +21,15 @@ return require('packer').startup(function(use)
         end
     }
 
+    use 'j-hui/fidget.nvim'
+
+    use {
+        'linrongbin16/lsp-progress.nvim',
+        config = function()
+            require('lsp-progress').setup()
+        end
+    }
+
     use {
         'nvim-treesitter/nvim-treesitter',
         { run = ':TSUpdate' },
