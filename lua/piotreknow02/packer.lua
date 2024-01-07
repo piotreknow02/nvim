@@ -21,7 +21,12 @@ return require('packer').startup(function(use)
         end
     }
 
-    use 'j-hui/fidget.nvim'
+    use {
+        'j-hui/fidget.nvim',
+        config = function ()
+            require('fidget').setup()
+        end
+    }
 
     use {
         'linrongbin16/lsp-progress.nvim',
